@@ -25,7 +25,6 @@ int main() {
         }
     }
 
-
     for (int i = 0; i < lineAmount; i++) {
         for (int k = 0; k < columnAmount; k++) {
             double* lineSum = sumLine(lines[i], columnAmount);
@@ -35,6 +34,8 @@ int main() {
     }
 
     cout << "Total - " << niceElems << endl;
+
+    for (int i = 0; i < lineAmount; i++) delete[] lines[i];
 
     return 0;
 }
