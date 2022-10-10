@@ -26,11 +26,11 @@ int main() {
     }
 
     for (int i = 0; i < lineAmount; i++) {
+        double* lineSum = sumLine(lines[i], columnAmount);
         for (int k = 0; k < columnAmount; k++) {
-            double* lineSum = sumLine(lines[i], columnAmount);
             niceElems += int(lines[i][k] < *lineSum - lines[i][k]);
-            delete lineSum;
         }
+        delete lineSum;
     }
 
     cout << "Total - " << niceElems << endl;
